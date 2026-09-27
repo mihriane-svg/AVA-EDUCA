@@ -1,4 +1,4 @@
-import {listagemUsuarios} from './listagem-usuarios.js';
+import {listagemUsuarios} from '../listagem-usuarios.js';
 
 export function login(email, senha){
     return new Promise((resolve, reject) => {
