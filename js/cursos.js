@@ -1,8 +1,8 @@
-import {listagemCursos} from './listagem-cursos.js';
+import { cursos } from '../dados/listagem-cursos.js';
 
-export function listarCursos(usuario) {
+export function listarCursos(emailUsuario) {
     return new Promise((resolve, reject) => {
-        const cursosDoUsuario = listagemCursos.filter(curso => curso.nomeUsuario === usuario);
+        const cursosDoUsuario = cursos.filter(curso => curso.emailProfessor === emailUsuario);
 
         if (cursosDoUsuario.length > 0){
             resolve(cursosDoUsuario);
