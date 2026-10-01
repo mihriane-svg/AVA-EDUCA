@@ -1,4 +1,4 @@
-import {alunos} from './listagem-alunos.js';
+import {alunos} from '../dados/listagem-alunos.js';
 
 export function cadastrarAluno(aluno) {
     return new Promise((resolve, reject) => {
