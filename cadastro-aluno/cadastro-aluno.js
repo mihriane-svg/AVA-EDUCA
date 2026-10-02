@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log("Formulário encontrado:", formCadastro);
 
-    // 1. Consumo da API do ViaCEP
     if (inputCep) {
         inputCep.addEventListener('blur', (e) => {
             const cep = e.target.value.replace(/\D/g, '');
@@ -29,10 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Envio do formulário - Mudando para escutar o clique direto ou submit com prevenção total
-    if (formCadastro) {
+        if (formCadastro) {
         formCadastro.addEventListener('submit', async (e) => {
-            e.preventDefault(); // Impede o recarregamento e o comportamento padrão
+            e.preventDefault(); 
             e.stopPropagation();
             
             console.log("Botão salvar foi clicado e preventDefault acionado!");
