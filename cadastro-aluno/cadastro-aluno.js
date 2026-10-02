@@ -90,4 +90,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    //logout
+const btnSair = document.getElementById('btn-sair');
+
+if (btnSair) {
+    btnSair.addEventListener('click', () => {
+        
+        sessionStorage.removeItem('usuarioLogado');
+        
+        window.location.href = '../login/login.html';
+    });
+}
 });
