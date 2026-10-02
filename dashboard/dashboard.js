@@ -43,4 +43,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         containerCursos.innerHTML = `<p>Erro ao carregar cursos: ${erro}</p>`;
         console.error(erro);
     }
+
+    //logout
+const btnSair = document.getElementById('btn-sair');
+
+if (btnSair) {
+    btnSair.addEventListener('click', () => {
+        
+        sessionStorage.removeItem('usuarioLogado');
+        
+        
+        window.location.href = '../login/login.html';
+    });
+}
 });
