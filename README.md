@@ -56,6 +56,7 @@ ava-educa/
 
 ## Como Executar o Projeto
 1. Clone o repositório para a sua máquina:
+
    ```bash
    git clone https://github.com/mihriane-svg/AVA-EDUCA.git
 
