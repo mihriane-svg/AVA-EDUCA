@@ -11,7 +11,7 @@
 
     <div class="dashboard-container">
 
-        <!-- Cabeçalho (Mesma estrutura do cadastro) -->
+        <!--Cabeçalho-->
         <header class="toolbar">
             <div style="display: flex; align-items: center; gap: 10px;">
                 <button id="btn-menu" class="btn-menu">☰</button>
@@ -20,7 +20,7 @@
             <div id="usuario-logado" class="user-info"></div>
         </header>
 
-        <!-- Menu Lateral (Gaveta) -->
+        <!--Menu Lateral-->
         <aside class="sidebar">
             <nav>
                 <ul>
@@ -42,7 +42,6 @@
 
     </div>
 
-    <!-- Script idêntico ao do cadastro para abrir/fechar o menu -->
     <script>
         document.addEventListener('click', (e) => {
             const btn = e.target.closest('#btn-menu');
