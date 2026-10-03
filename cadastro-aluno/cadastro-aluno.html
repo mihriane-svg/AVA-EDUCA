@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Alunos</title>
 
+    <!--Link do CSS padrão-->
+    <link rel="stylesheet" href="../style.css">
+
     <!--Link do CSS-->
     <link rel="stylesheet" href="cadastro-aluno.css">
     
@@ -14,9 +17,12 @@
 <body>
     <div class="dashboard-container">
 
-        <!--Cabeçalho-->
+        <!--Cabeçalho (Com o botão hambúrguer) -->
         <header class="toolbar">
-            <div class="logo">AVA-EDUCA+</div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <button id="btn-menu" class="btn-menu">☰</button>
+                <div class="logo">AVA-EDUCA+</div>
+            </div>
             <div id="usuario-logado" class="user-info"></div>
         </header>
 
@@ -86,6 +92,21 @@
             </section>
         </main>
     </div>
-<script type="module" src="cadastro-aluno.js"></script>
+
+    <!-- Script para abrir/fechar o menu no celular -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnMenu = document.getElementById('btn-menu');
+            const sidebar = document.querySelector('.sidebar');
+
+            if (btnMenu && sidebar) {
+                btnMenu.addEventListener('click', () => {
+                    sidebar.classList.toggle('ativo');
+                });
+            }
+        });
+    </script>
+
+    <script type="module" src="cadastro-aluno.js"></script>
 </body>
 </html>

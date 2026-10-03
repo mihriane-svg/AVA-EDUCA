@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - AVA-EDUCA+</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="./dashboard.css">
 </head>
 <body>
 
     <div class="dashboard-container">
 
-        <!-- Cabeçalho -->
+        <!--Cabeçalho-->
         <header class="toolbar">
-            <div class="logo">AVA-EDUCA+</div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <button id="btn-menu" class="btn-menu">☰</button>
+                <div class="logo">AVA-EDUCA+</div>
+            </div>
             <div id="usuario-logado" class="user-info"></div>
         </header>
 
-        <!-- Menu lateral -->
+        <!--Menu Lateral-->
         <aside class="sidebar">
             <nav>
                 <ul>
@@ -28,6 +32,7 @@
             </nav>
         </aside>
         
+        <!-- Conteúdo Principal -->
         <main class="dashboard-content">
             <section>
                 <h2>Meus Cursos</h2>
@@ -37,6 +42,17 @@
 
     </div>
 
+    <script>
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('#btn-menu');
+            if (btn) {
+                const sidebar = document.querySelector('.sidebar');
+                if (sidebar) {
+                    sidebar.classList.toggle('ativo');
+                }
+            }
+        });
+    </script>
     <script type="module" src="dashboard.js"></script>
 </body>
 </html>

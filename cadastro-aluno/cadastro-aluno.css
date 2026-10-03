@@ -27,7 +27,7 @@ body, html {
     align-items: center;
     background-color: #2c3e50;
     color: white;
-    padding: 0 30px; 
+    padding: 0 20px; 
     z-index: 10; 
 }
 
@@ -77,10 +77,12 @@ body, html {
     background-color: #2c3e50;
 }
 
+
 .sidebar nav ul li a.disabled {
-    color: #7f8c8d;
-    cursor: not-allowed;
-    pointer-events: none;
+    color: #7f8c8d;          
+    cursor: not-allowed;    
+    pointer-events: none;    
+    opacity: 0.6;          
 }
 
 .sidebar nav ul li a.active {
@@ -154,4 +156,75 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #27ae60;
+}
+
+
+.btn-menu {
+    display: none; /* Escondido no desktop */
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .btn-menu {
+        display: block !important;
+        background: none;
+        color: white;
+        border: none;
+        font-size: 1.4rem;
+        cursor: pointer;
+        padding: 0;
+        margin-right: 5px;
+    }
+
+    .sidebar {
+        display: none !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .sidebar.ativo {
+        display: block !important;
+    }
+
+    .dashboard-content {
+        padding: 15px;
+        width: 100%;
+    }
+
+    form {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .dashboard-content {
+        padding: 15px;
+        width: 100%;
+    }
+
+    form {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px;
+    }
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }

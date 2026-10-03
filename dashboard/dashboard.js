@@ -2,7 +2,7 @@ import { listarCursos } from '../js/cursos.js';
 
 document.addEventListener("DOMContentLoaded", async () => {
     const dadoUsuario = sessionStorage.getItem("usuarioLogado");
-
+    
     if(!dadoUsuario){
         alert("Nenhum usuário logado. Redirecionando...");
         window.location.href = "../login/login.html";
