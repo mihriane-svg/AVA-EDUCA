@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AVA-EDUCA+</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+
+        <!--Cabeçalho-->
+        <header class="toolbar">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <button id="btn-menu" class="btn-menu">☰</button>
+                <div class="logo">AVA-EDUCA+</div>
+            </div>
+            <div id="usuario-logado" class="user-info"></div>
+        </header>
+
+        <!--Menu Lateral-->
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="#" class="disabled">Cursos</a></li>
+                    <li><a href="../cadastro-aluno/cadastro-aluno.html">Cadastro de Alunos</a></li>
+                    <li><button id="btn-sair" class="btn-sair">Sair</button></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Conteúdo Principal -->
+        <main class="dashboard-content">
+            <section>
+                <h2>Meus Cursos</h2>
+                <div id="lista-cursos" class="cards-container"></div>
+            </section>
+        </main>
+
+    </div>
+
+    <script>
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('#btn-menu');
+            if (btn) {
+                const sidebar = document.querySelector('.sidebar');
+                if (sidebar) {
+                    sidebar.classList.toggle('ativo');
+                }
+            }
+        });
+    </script>
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>
