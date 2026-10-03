@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('O nome completo deve ter entre 4 e 80 caracteres.');
                 return;
             }
-
+            //Moment.js
             const dataNasc = moment(dataNascimentoStr);
             const dataMinima = moment('1990-01-01');
             const dataAtual = moment();
