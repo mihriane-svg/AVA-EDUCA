@@ -1,3 +1,6 @@
+/* ==========================================================
+   CONFIGURAÇÕES GLOBAIS E RESET
+   ========================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +9,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+    color: #333333;
+    background-color: #f4f8ff;
+}
+
+/* Garante que inputs e imagens nunca estourem os containers */
+input, select, textarea, button, img {
+    max-width: 100%;
+    box-sizing: border-box;
 }
